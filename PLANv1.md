@@ -15,5 +15,5 @@ Things we need to sort out before we start testing
   + Increase the frequency of short SMIs (granularity?)
   + Increase the frequency of long SMIs (granularity?)
 
-#### Hypopothesis
+#### Hypothesis
   + We need one
