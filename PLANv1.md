@@ -16,4 +16,6 @@ Things we need to sort out before we start testing
   + Increase the frequency of long SMIs (granularity?)
 
 #### Hypothesis
-  + We need one
+  + SMI's should have a similar effect on non-hyperthreaded cpus as it does hyperthreaded cpus.  In other words, 
+    the expected performance change when changing from non-hyper threaded cpus to hyperthreaded cpus should 
+    not change due to the presence of SMI.
