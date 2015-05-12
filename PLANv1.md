@@ -19,6 +19,9 @@ Things we need to sort out before we start testing
   + SMI's should have a similar effect on non-hyperthreaded cpus as it does hyperthreaded cpus.  In other words, 
     the expected performance change when changing from non-hyper threaded cpus to hyperthreaded cpus should 
     not change due to the presence of SMI.
+  + Theoretical Evidence 
+    * One might argue that since hyperthreading allows for multiple threads to simultaneously execute on a core, it could result in more CPU state to save/restore before/after an SMI. However, a source suggests that when an SMI occurs, "...almost every single CPU register is saved in a “memory saved state map” that is itself stored into a memory zone called SMRAM" (https://cansecwest.com/csw09/csw09-duflot.pdf)
+    * TODO: investigate cache coherence impact. Wikipedia says that any write-back caches must be flushed on an SMI. 
 
 #### Tasks
   + Research previous work
