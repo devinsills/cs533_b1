@@ -67,6 +67,10 @@ Things we need to sort out before we start testing
 > better utilization of the FPU.
 
 
+  + Improving Database Performance on Simultaneous Multithreading Processors
+    * http://delivery.acm.org.proxy.lib.pdx.edu/10.1145/1090000/1083602/p49-zhou.pdf?ip=131.252.96.28&id=1083602&acc=ACTIVE%20SERVICE&key=B63ACEF81C6334F5.CA8B0988038A4DF4.4D4702B0C3E38B35.4D4702B0C3E38B35&CFID=513444346&CFTOKEN=74238333&__acm__=1432247660_e729e68f72bd9d9cb0c1b84f604679de
+    * 
+
 #### Tasks
   + Research previous work
     * http://web.cecs.pdx.edu/~karavan/research/SMM_IISWC_preprint.pdf
