@@ -69,7 +69,26 @@ Things we need to sort out before we start testing
 
   + Improving Database Performance on Simultaneous Multithreading Processors
     * http://delivery.acm.org.proxy.lib.pdx.edu/10.1145/1090000/1083602/p49-zhou.pdf?ip=131.252.96.28&id=1083602&acc=ACTIVE%20SERVICE&key=B63ACEF81C6334F5.CA8B0988038A4DF4.4D4702B0C3E38B35.4D4702B0C3E38B35&CFID=513444346&CFTOKEN=74238333&__acm__=1432247660_e729e68f72bd9d9cb0c1b84f604679de
-    * 
+    * This paper had an interesting approach to leveraging HT for DB performance. In one scenario, the use a helper hyperthread to pre-load data for the other, real thread: 
+
+> We also propose a new, general thread-based
+> preloading technique for SMT processors. We utilize
+> one thread, the helper thread to perform aggressive
+> data preloading. The main computation is executed in
+> the other thread, which we call the main thread.
+> The helper thread works ahead of the main thread, triggering 
+> memory accesses for data elements that will soon
+> be needed in the main thread. For reasons discussed
+> in Section 2.3, the helper thread performs an explicit
+> load instruction, and not a prefetch instruction.
+> If the preloading happens in an optimal manner,
+> the main thread will almost always find the requested
+> data in the cache and experience a higher cache hit
+> rate. The data preloading performed by the helper
+> thread can be overlapped with the CPU computation
+> done by the main thread. The helper thread suffers
+> most of the memory latency, while the main thread is
+> free to work on the real computation.
 
 #### Tasks
   + Research previous work
