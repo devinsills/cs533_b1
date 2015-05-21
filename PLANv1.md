@@ -23,6 +23,22 @@ Things we need to sort out before we start testing
     * One might argue that since hyperthreading allows for multiple threads to simultaneously execute on a core, it could result in more CPU state to save/restore before/after an SMI. However, a source suggests that when an SMI occurs, "...almost every single CPU register is saved in a “memory saved state map” that is itself stored into a memory zone called SMRAM" (https://cansecwest.com/csw09/csw09-duflot.pdf)
     * TODO: investigate cache coherence impact. Wikipedia says that any write-back caches must be flushed on an SMI. 
 
+#### Hyperthreading materials
+  + Characterizing the Performance of Data Management Systems on Hyper-Threaded Architectures 
+    * http://ieeexplore.ieee.org.proxy.lib.pdx.edu/stamp/stamp.jsp?tp=&arnumber=4032421
+    * Reports the effects of HT on DB performance (up to 1.16x improvement) 
+    * Older processor, but here's their cache behavior model: 
+> In SMT architectures the cache
+> hierarchy is shared among all the thread contexts. This
+> is also the case in the Intel Pentium 4 hyperthreaded
+> architecture, where both threads share the L1
+> instruction trace cache, the L1 data cache, and the
+> unified L2 cache. This sharing can be either beneficial,
+> if for example one thread prefetches data for the other,
+> or detrimental, if one thread conflicts with the other
+> causing a large number of cache misses
+    * Majority of their performance benefit from reduction in L2 cache misses 
+
 #### Tasks
   + Research previous work
     * http://web.cecs.pdx.edu/~karavan/research/SMM_IISWC_preprint.pdf
