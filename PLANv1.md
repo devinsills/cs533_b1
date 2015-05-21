@@ -51,6 +51,22 @@ Things we need to sort out before we start testing
 > from the next level of cache for each of the threads, there will, in general, 
 > be no performance benefit of running in HT
 
+    * And summary of model for functional unit usage: 
+
+> The main benefit of HT comes from the ability of
+> execution units in the core, such as the floating-point units
+> (FPU), to handle instructions from more than one thread
+> simultaneously. The FPU is a shared resource that is
+> unaware of the multiple threads. From its perspective, it is merely 
+> handling a stream of instructions organized in a pipeline of the six 
+> execution units — during each cycle, it can
+> start executing the micro-operation in the next stage. Note
+> that this will often lead to gaps (as shown earlier in Figure 1)
+> where there is no micro-operation to execute. This could be,
+> for example, due to a wait for a load instruction to complete.
+> With HT, such gaps in the FPU’s pipeline can be filled with 
+> micro-operations from a second thread — thus making for
+> better utilization of the FPU.
 
 
 #### Tasks
