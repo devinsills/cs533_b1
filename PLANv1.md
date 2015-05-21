@@ -70,6 +70,32 @@ Things we need to sort out before we start testing
   + Improving Database Performance on Simultaneous Multithreading Processors
     * http://delivery.acm.org.proxy.lib.pdx.edu/10.1145/1090000/1083602/p49-zhou.pdf?ip=131.252.96.28&id=1083602&acc=ACTIVE%20SERVICE&key=B63ACEF81C6334F5.CA8B0988038A4DF4.4D4702B0C3E38B35.4D4702B0C3E38B35&CFID=513444346&CFTOKEN=74238333&__acm__=1432247660_e729e68f72bd9d9cb0c1b84f604679de
     * 
+    * 
+    *   + The Impact of Hyper-Threading on Processor Resource Utilization in Production Applications
+    * http://www.nas.nasa.gov/assets/pdf/papers/saini_s_impact_hyper_threading_2011.pdf
+    * Good summary of what we'd expect from HT regarding memory contention (and model for functional unit usage as well): 
+
+> If sufficient resources (cache and memory bandwidth) are available, 
+> sharing them across multiple threads in HT mode will result in better 
+> performance than with ST. However, we expect that if such sharing increases 
+> contention between the threads to the extent that data needs to be accessed 
+> from the next level of cache for each of the threads, there will, in general, 
+> be no performance benefit of running in HT
+
+> The main benefit of HT comes from the ability of
+> execution units in the core, such as the floating-point units
+> (FPU), to handle instructions from more than one thread
+> simultaneously. The FPU is a shared resource that is
+> unaware of the multiple threads. From its perspective, it is merely 
+> handling a stream of instructions organized in a pipeline of the six 
+> execution units — during each cycle, it can
+> start executing the micro-operation in the next stage. Note
+> that this will often lead to gaps (as shown earlier in Figure 1)
+> where there is no micro-operation to execute. This could be,
+> for example, due to a wait for a load instruction to complete.
+> With HT, such gaps in the FPU’s pipeline can be filled with 
+> micro-operations from a second thread — thus making for
+> better utilization of the FPU.
 
 #### Tasks
   + Research previous work
