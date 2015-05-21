@@ -42,7 +42,7 @@ Things we need to sort out before we start testing
 
   + The Impact of Hyper-Threading on Processor Resource Utilization in Production Applications
     * http://www.nas.nasa.gov/assets/pdf/papers/saini_s_impact_hyper_threading_2011.pdf
-    * Good summary of what we'd expect from HT regarding memory contention: 
+    * Good summary of what we'd expect from HT regarding memory contention (and model for functional unit usage as well): 
 
 > If sufficient resources (cache and memory bandwidth) are available, 
 > sharing them across multiple threads in HT mode will result in better 
@@ -50,8 +50,6 @@ Things we need to sort out before we start testing
 > contention between the threads to the extent that data needs to be accessed 
 > from the next level of cache for each of the threads, there will, in general, 
 > be no performance benefit of running in HT
-
-    * And summary of model for functional unit usage: 
 
 > The main benefit of HT comes from the ability of
 > execution units in the core, such as the floating-point units
