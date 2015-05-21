@@ -39,6 +39,17 @@ Things we need to sort out before we start testing
 > causing a large number of cache misses
     * Majority of their performance benefit from reduction in L2 cache misses 
 
+  + The Impact of Hyper-Threading on Processor Resource Utilization in Production Applications
+    * http://www.nas.nasa.gov/assets/pdf/papers/saini_s_impact_hyper_threading_2011.pdf
+    * Good summary of what we'd expect from HT regarding memory contention: 
+> If sufficient resources (cache and memory bandwidth) are available, 
+> sharing them across multiple threads in HT mode will result in better 
+> performance than with ST. However, we expect that if such sharing increases 
+> contention between the threads to the extent that data needs to be accessed 
+> from the next level of cache for each of the threads, there will, in general, 
+> be no performance benefit of running in HT
+
+
 #### Tasks
   + Research previous work
     * http://web.cecs.pdx.edu/~karavan/research/SMM_IISWC_preprint.pdf
